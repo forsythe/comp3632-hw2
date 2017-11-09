@@ -37,7 +37,7 @@ iv =  'COMP3111 test iv'
 obj = AES.new(key, AES.MODE_CBC, iv)
 message = "Message block1  Message block2"
 message = pad(message)
-g = open("plaintext", "wb")
+g = open("padded_plaintext", "wb")
 g.write(message)
 g.close()
 ##print message

@@ -14,3 +14,6 @@ classes: $(CLASSES:.java=.class)
 
 clean:
 	$(RM) *.class
+	$(RM) custom_ciphertext
+	$(RM) padded_plaintext
+	$(RM) ciphertext

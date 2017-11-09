@@ -4,11 +4,11 @@ First compile the oracle from other folder and place the oracle here.
 ```make```  
 
 ##GENERATE PADDED PLAINTEXT  
-Generate a padded plaintext `plaintext` and ciphertext `ciphertext` with ```python plaintext_and_ciphertext_gen.py```
+Generate a padded plaintext `padded_plaintext` and ciphertext `ciphertext` with ```python plaintext_and_ciphertext_gen.py```
 
 ##ENCRYPTION  
 javac encrypt.java  
-java encrypt "plaintext" > "custom_ciphertext  "
+java encrypt "padded_plaintext" > "custom_ciphertext"
 
 ##DECRYPTING THE GENERAYED CIPHERTEXT  
 java decrypt "ciphertext" | xxd  

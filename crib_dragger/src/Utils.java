@@ -9,8 +9,9 @@ public class Utils {
 		}
 		return ans;
 	}
-	 static boolean stringContainsItemFromList(String inputStr, String[] items) {
-	    return Arrays.stream(items).parallel().anyMatch(inputStr::contains);
+
+	static boolean stringContainsItemFromList(String inputStr, String[] items) {
+		return Arrays.stream(items).parallel().anyMatch(inputStr::contains);
 	}
 
 	static ArrayList<byte[]> getCribDraggingTemplates(int length, String crib) {
@@ -33,14 +34,13 @@ public class Utils {
 		return ans;
 	}
 
-	public static ArrayList<byte[]> getCroppedcaXORcb(
-			int length, byte[] caXORcb) {
+	public static ArrayList<byte[]> getCroppedcaXORcb(int length, byte[] caXORcb) {
 		ArrayList<byte[]> ans = new ArrayList<byte[]>();
 
 		for (int k = 0; k < caXORcb.length + 1 - length; k++) {
 			byte[] temp = new byte[length];
 			for (int c = 0; c < length; c++) {
-				temp[c] = (byte) caXORcb[k+c];
+				temp[c] = (byte) caXORcb[k + c];
 			}
 			ans.add(temp);
 		}
